@@ -42,7 +42,7 @@ The solution is designed to:
 ### 1️⃣ Deploy Domain Controller VM
 
 Via Azure Portal > “Deploy a custom template” and upload `DC/template.json` and `DC/parameters.json`.
-
+Create a new resource group "sql-ha" in Central India and select it for the deployment.
 ---
 
 ### 2️⃣ Create SQL Server Service Account
