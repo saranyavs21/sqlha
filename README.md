@@ -91,4 +91,4 @@ You can also check High Availability configuration from the SQL Virtual Machines
 
 Feel free to open an issue or submit a pull request if you find any problems or improvements!
 
-Happy deploying! 🚀
+Happy deploying!
