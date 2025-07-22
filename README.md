@@ -7,6 +7,7 @@ This repository contains all the necessary **ARM templates** and **PowerShell sc
 ## 📖 Overview
 
 The solution is designed to:
+
 ✅ Deploy a **Domain Controller VM** on Azure  
 ✅ Create a dedicated **SQL Server domain service account**  
 ✅ Deploy two SQL Server 2022 Enterprise VMs in an **Always On Availability Group (AG)**  
