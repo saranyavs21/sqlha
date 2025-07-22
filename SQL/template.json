@@ -352,7 +352,7 @@
                             "type": "string",
                             "allowedValues": [
                                 "Static",
-                                "Dynamic"
+                                "static"
                             ]
                         },
                         "publicIpAddressSku": {
@@ -547,7 +547,7 @@
                                             "subnet": {
                                                 "id": "[variables('subnetRef')]"
                                             },
-                                            "privateIPAllocationMethod": "Dynamic",
+                                            "privateIPAllocationMethod": "static",
                                             "publicIpAddress": {
                                                 "id": "[resourceId(resourceGroup().name, 'Microsoft.Network/publicIpAddresses', parameters('publicIpAddressName'))]",
                                                 "properties": {
