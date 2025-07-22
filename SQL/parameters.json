@@ -54,7 +54,7 @@
             "value": true
         },
         "networkSecurityGroupId": {
-            "value": "/subscriptions/5a8233bb-2ab1-4070-ac9a-c5ee5896d0f3/resourceGroups/sql-ha/providers/Microsoft.Network/networkSecurityGroups/sqlNSG"
+            "value": "/subscriptions/5a8233bb-2ab1-4070-ac9a-c5ee5896d0f3/resourceGroups/sql-ha/providers/Microsoft.Network/networkSecurityGroups/dcNSG"
         },
         "replicaRoleArray": {
             "value": [
