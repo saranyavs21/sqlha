@@ -33,7 +33,6 @@ The solution is designed to:
 ## 📝 Prerequisites
 
 - Azure subscription
-- Azure CLI installed
 - Administrative access to deploy resources and join domain
 
 ---
@@ -42,11 +41,7 @@ The solution is designed to:
 
 ### 1️⃣ Deploy Domain Controller VM
 
-```bash
-az deployment group create   --resource-group dc-rg   --template-file DC/template.json   --parameters @DC/parameters.json
-```
-
-Or via Azure Portal > “Deploy a custom template” and upload `DC/template.json` and `DC/parameters.json`.
+Via Azure Portal > “Deploy a custom template” and upload `DC/template.json` and `DC/parameters.json`.
 
 ---
 
@@ -66,11 +61,7 @@ Tip: Change the default password in the script to a strong, unique one before ru
 
 ### 3️⃣ Deploy SQL Server Cluster
 
-```bash
-az deployment group create   --resource-group sql-ha   --template-file SQL/template.json   --parameters @SQL/parameters.json
-```
-
-Or via Azure Portal > “Deploy a custom template”.
+Via Azure Portal > “Deploy a custom template”.
 
 ---
 
