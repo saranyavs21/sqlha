@@ -547,7 +547,7 @@
                                             "subnet": {
                                                 "id": "[variables('subnetRef')]"
                                             },
-                                            "privateIPAllocationMethod": "static",
+                                            "privateIPAllocationMethod": "dynamic",
                                             "publicIpAddress": {
                                                 "id": "[resourceId(resourceGroup().name, 'Microsoft.Network/publicIpAddresses', parameters('publicIpAddressName'))]",
                                                 "properties": {
