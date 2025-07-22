@@ -144,7 +144,7 @@
             "value": "sqladmin"
         },
         "sqlAuthenticationPassword": {
-            "value": ""Sqlaccnt@2025!""
+            "value": "Sqlaccnt@2025!"
         },
         "maxdop": {
             "value": 0
