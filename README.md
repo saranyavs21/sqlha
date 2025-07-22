@@ -86,7 +86,7 @@ You can also check High Availability configuration from the SQL Virtual Machines
 
 ## 📄 Notes
 
-- The NSG rules in the templates include ports needed for RDP, DNS, WSFC, and SQL.
+- The NSG rules in the templates include ports needed for RDP, WSFC, and SQL.
 - Change any hardcoded passwords in the `sqlserviceaccount.ps1` script before use.
 - Cloud Witness storage account is created automatically if specified.
 
