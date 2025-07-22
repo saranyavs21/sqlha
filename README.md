@@ -64,6 +64,7 @@ Tip: Change the default password in the script to a strong, unique one before ru
 ### 3️⃣ Deploy SQL Server Cluster
 
 Via Azure Portal > “Deploy a custom template”.
+Upload template and parameters files and proceed with the deployment in the "sql-ha" resource group.
 
 ---
 
@@ -81,7 +82,7 @@ You can also check High Availability configuration from the SQL Virtual Machines
 
 - You can customize names, IP addresses, domain names, admin usernames/passwords, etc., in the template parameters.
 - You need to update subscription ID in the template/parameters file with your subscription ID.
-- The NSG rules in the templates include ports needed for RDP and WSFC. You can also use separate NSGs for SQL and DC. 
+- Same NSG is being used for DC and SQL machines. NSG rules in the templates include ports needed for RDP and WSFC. You can also use separate NSGs for SQL and DC. 
 - Cloud Witness storage account is created automatically if specified.
 
 ---
