@@ -123,7 +123,7 @@
             "value": "Yes"
         },
         "storageAccountName": {
-            "value": "witnessaccnt"
+            "value": "witnessaccnt023"
         },
         "storageAccountResourceGroup": {
             "value": "sql-ha"
