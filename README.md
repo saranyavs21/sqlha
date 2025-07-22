@@ -1,4 +1,4 @@
-# 🚀 Azure SQL Server High Availability Deployment with ARM Templates
+# Azure SQL Server High Availability Deployment with ARM Templates
 
 This repository contains all the necessary **ARM templates** and **PowerShell scripts** to deploy a fully automated, highly available SQL Server 2022 Always On Availability Group on Microsoft Azure.
 
