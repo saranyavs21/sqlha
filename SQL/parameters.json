@@ -87,7 +87,7 @@
             "value": "sqlvm"
         },
         "localAdminPassword": {
-            "value": null
+            "value": "Sqlvm@1234567"
         },
         "sqlServerImageType": {
             "value": "SQL2022-WS2022"
@@ -105,13 +105,13 @@
             "value": "False"
         },
         "sqlServiceAccountPassword": {
-            "value": null
+            "value": "Sqlaccnt@2025!"
         },
         "domainUserName": {
             "value": "sqladmin"
         },
         "domainUserPassword": {
-            "value": null
+            "value": "Sqlaccnt@2025!"
         },
         "domainFQDN": {
             "value": "corp.contoso.com"
@@ -144,7 +144,7 @@
             "value": "sqladmin"
         },
         "sqlAuthenticationPassword": {
-            "value": null
+            "value": ""Sqlaccnt@2025!""
         },
         "maxdop": {
             "value": 0
