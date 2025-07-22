@@ -1,0 +1,285 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "centralindia"
+        },
+        "existingVirtualNetworkName": {
+            "value": "sqlVnet"
+        },
+        "existingVirtualNetworkResourceGroupName": {
+            "value": "sql-ha"
+        },
+        "availabilitySetName": {
+            "value": "sqlset"
+        },
+        "vmNamesForPrimaryAndSecondaryReplicas": {
+            "value": [
+                "sqlvm1",
+                "sqlvm2"
+            ]
+        },
+        "subnetNames": {
+            "value": [
+                "sqlvm1",
+                "sqlvm2"
+            ]
+        },
+        "listOfListenerIps": {
+            "value": [
+                "10.0.1.6",
+                "10.0.2.6"
+            ]
+        },
+        "listOfPublicIps": {
+            "value": [
+                "sqlvm1-ip",
+                "sqlvm2-ip"
+            ]
+        },
+        "publicIpAddressSku": {
+            "value": "Standard"
+        },
+        "publicIpAddressType": {
+            "value": "Static"
+        },
+        "pipDeleteOption": {
+            "value": "Delete"
+        },
+        "nicDeleteOption": {
+            "value": "Delete"
+        },
+        "enableAcceleratedNetworking": {
+            "value": true
+        },
+        "networkSecurityGroupId": {
+            "value": "/subscriptions/5a8233bb-2ab1-4070-ac9a-c5ee5896d0f3/resourceGroups/sql-ha/providers/Microsoft.Network/networkSecurityGroups/sqlNSG"
+        },
+        "replicaRoleArray": {
+            "value": [
+                "Primary",
+                "Secondary"
+            ]
+        },
+        "replicaAutoFailArray": {
+            "value": [
+                "Automatic",
+                "Automatic"
+            ]
+        },
+        "replicaSyncCommitArray": {
+            "value": [
+                "Synchronous_Commit",
+                "Synchronous_Commit"
+            ]
+        },
+        "replicaReadableSecArray": {
+            "value": [
+                "No",
+                "Read_Only"
+            ]
+        },
+        "sizeForVirtualMachines": {
+            "value": "Standard_D2as_v5"
+        },
+        "localAdminUserName": {
+            "value": "sqlvm"
+        },
+        "localAdminPassword": {
+            "value": null
+        },
+        "sqlServerImageType": {
+            "value": "SQL2022-WS2022"
+        },
+        "sqlServerSku": {
+            "value": "enterprise"
+        },
+        "sqlServerLicenseType": {
+            "value": "PAYG"
+        },
+        "sqlServiceAccountUserName": {
+            "value": "sqladmin"
+        },
+        "isSqlServiceAccountGmsa": {
+            "value": "False"
+        },
+        "sqlServiceAccountPassword": {
+            "value": null
+        },
+        "domainUserName": {
+            "value": "sqladmin"
+        },
+        "domainUserPassword": {
+            "value": null
+        },
+        "domainFQDN": {
+            "value": "corp.contoso.com"
+        },
+        "failoverClusterName": {
+            "value": "wincluster"
+        },
+        "createNewStorageAccount": {
+            "value": "Yes"
+        },
+        "storageAccountName": {
+            "value": "witnessaccnt"
+        },
+        "storageAccountResourceGroup": {
+            "value": "sql-ha"
+        },
+        "availabilityGroup": {
+            "value": "sqlag"
+        },
+        "listenerName": {
+            "value": "listener"
+        },
+        "sqlConnectivityType": {
+            "value": "Public"
+        },
+        "sqlPortNumber": {
+            "value": 1433
+        },
+        "sqlAuthenticationLogin": {
+            "value": "sqladmin"
+        },
+        "sqlAuthenticationPassword": {
+            "value": null
+        },
+        "maxdop": {
+            "value": 0
+        },
+        "isOptimizeForAdHocWorkloadsEnabled": {
+            "value": false
+        },
+        "collation": {
+            "value": "SQL_Latin1_General_CP1_CI_AS"
+        },
+        "minServerMemoryMB": {
+            "value": 0
+        },
+        "maxServerMemoryMB": {
+            "value": 2147483647
+        },
+        "isLPIMEnabled": {
+            "value": false
+        },
+        "isIFIEnabled": {
+            "value": false
+        },
+        "osDiskType": {
+            "value": "Premium_LRS"
+        },
+        "osDiskDeleteOption": {
+            "value": "Delete"
+        },
+        "dataDisks1": {
+            "value": [
+                {
+                    "lun": 0,
+                    "createOption": "attach",
+                    "deleteOption": "Detach",
+                    "caching": "ReadOnly",
+                    "writeAcceleratorEnabled": false,
+                    "id": null,
+                    "name": "sqlvm1_DataDisk_0",
+                    "storageAccountType": null,
+                    "diskSizeGB": null,
+                    "diskEncryptionSet": null
+                }
+            ]
+        },
+        "dataDiskResources1": {
+            "value": [
+                {
+                    "name": "sqlvm1_DataDisk_0",
+                    "sku": "Premium_LRS",
+                    "properties": {
+                        "diskSizeGB": 64,
+                        "creationData": {
+                            "createOption": "empty"
+                        }
+                    }
+                }
+            ]
+        },
+        "dataDisks2": {
+            "value": [
+                {
+                    "lun": 0,
+                    "createOption": "attach",
+                    "deleteOption": "Detach",
+                    "caching": "ReadOnly",
+                    "writeAcceleratorEnabled": false,
+                    "id": null,
+                    "name": "sqlvm2_DataDisk_0",
+                    "storageAccountType": null,
+                    "diskSizeGB": null,
+                    "diskEncryptionSet": null
+                }
+            ]
+        },
+        "dataDiskResources2": {
+            "value": [
+                {
+                    "name": "sqlvm2_DataDisk_0",
+                    "sku": "Premium_LRS",
+                    "properties": {
+                        "diskSizeGB": 64,
+                        "creationData": {
+                            "createOption": "empty"
+                        }
+                    }
+                }
+            ]
+        },
+        "sqlStorageWorkloadType": {
+            "value": "General"
+        },
+        "sqlStorageDisksConfigurationType": {
+            "value": "NEW"
+        },
+        "dataPath": {
+            "value": "F:\\data"
+        },
+        "dataDisksLUNs": {
+            "value": [
+                0
+            ]
+        },
+        "logPath": {
+            "value": "F:\\log"
+        },
+        "logDisksLUNs": {
+            "value": [
+                0
+            ]
+        },
+        "tempDbPath": {
+            "value": "F:\\tempDb"
+        },
+        "tempDisksLUNs": {
+            "value": [
+                0
+            ]
+        },
+        "dataFileCount": {
+            "value": 2
+        },
+        "dataFileSize": {
+            "value": 8
+        },
+        "dataGrowth": {
+            "value": 64
+        },
+        "logFileSize": {
+            "value": 8
+        },
+        "logGrowth": {
+            "value": 64
+        },
+        "sqlSystemDbOnDataDisk": {
+            "value": false
+        }
+    }
+}
