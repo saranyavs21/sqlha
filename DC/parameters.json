@@ -12,7 +12,7 @@
       "value": "Dcadmin@1234567"
     },
     "safeModePassword": {
-      "value": "Sqladmin@1234567"
+      "value": "Sqladmin@123456"
     },
     "location": {
       "value": "[resourceGroup().location]"
