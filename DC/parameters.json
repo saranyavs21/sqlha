@@ -9,10 +9,10 @@
       "value": "dcadmin"
     },
     "adminPassword": {
-      "value": null
+      "value": "Dcadmin@1234567"
     },
     "safeModePassword": {
-      "value": null
+      "value": "Sqladmin@1234567"
     },
     "location": {
       "value": "[resourceGroup().location]"
