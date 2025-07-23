@@ -22,8 +22,8 @@
         },
         "subnetNames": {
             "value": [
-                "sqlvm1",
-                "sqlvm2"
+                "sqlvm1Subnet",
+                "sqlvm2Subnet"
             ]
         },
         "listOfListenerIps": {
@@ -45,16 +45,16 @@
             "value": "Static"
         },
         "pipDeleteOption": {
-            "value": "Delete"
+            "value": "Detach"
         },
         "nicDeleteOption": {
-            "value": "Delete"
+            "value": "Detach"
         },
         "enableAcceleratedNetworking": {
             "value": true
         },
         "networkSecurityGroupId": {
-            "value": "/subscriptions/5a8233bb-2ab1-4070-ac9a-c5ee5896d0f3/resourceGroups/sql-ha/providers/Microsoft.Network/networkSecurityGroups/dcNSG"
+            "value": "/subscriptions/1b2d1b17-a3c9-4e3b-b2e5-586293c708ab/resourceGroups/sql-ha/providers/Microsoft.Network/networkSecurityGroups/sqlNSG"
         },
         "replicaRoleArray": {
             "value": [
@@ -84,10 +84,10 @@
             "value": "Standard_D2as_v5"
         },
         "localAdminUserName": {
-            "value": "sqlvm"
+            "value": "Sqlvm"
         },
         "localAdminPassword": {
-            "value": "Sqlvm@1234567"
+            "value": null
         },
         "sqlServerImageType": {
             "value": "SQL2022-WS2022"
@@ -105,13 +105,13 @@
             "value": "False"
         },
         "sqlServiceAccountPassword": {
-            "value": "Sqlaccnt@2025!"
+            "value": null
         },
         "domainUserName": {
             "value": "sqladmin"
         },
         "domainUserPassword": {
-            "value": "Sqlaccnt@2025!"
+            "value": null
         },
         "domainFQDN": {
             "value": "corp.contoso.com"
@@ -123,16 +123,16 @@
             "value": "Yes"
         },
         "storageAccountName": {
-            "value": "witnessaccnt023"
+            "value": "sqlhaaccnt1"
         },
         "storageAccountResourceGroup": {
             "value": "sql-ha"
         },
         "availabilityGroup": {
-            "value": "sqlag"
+            "value": "AG"
         },
         "listenerName": {
-            "value": "listener"
+            "value": "Listener"
         },
         "sqlConnectivityType": {
             "value": "Public"
@@ -144,7 +144,7 @@
             "value": "sqladmin"
         },
         "sqlAuthenticationPassword": {
-            "value": "Sqlaccnt@2025!"
+            "value": null
         },
         "maxdop": {
             "value": 0
