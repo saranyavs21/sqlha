@@ -49,6 +49,18 @@
             "properties": {
               "addressPrefix": "10.0.0.0/24"
             }
+          },
+          {
+            "name": "sqlvm1Subnet",
+            "properties": {
+              "addressPrefix": "10.0.1.0/24"
+            }
+          },
+          {
+            "name": "sqlvm2Subnet",
+            "properties": {
+              "addressPrefix": "10.0.2.0/24"
+            }
           }
         ]
       }
@@ -68,12 +80,84 @@
       "location": "[parameters('location')]",
       "properties": {
         "securityRules": [
-          { "name": "Allow-RDP", "properties": { "protocol": "Tcp", "sourcePortRange": "*", "destinationPortRange": "3389", "sourceAddressPrefix": "*", "destinationAddressPrefix": "*", "access": "Allow", "priority": 1000, "direction": "Inbound" }},
-          { "name": "AllowAnyHTTPInbound", "properties": { "protocol": "TCP", "sourcePortRange": "*", "destinationPortRange": "80", "sourceAddressPrefix": "*", "destinationAddressPrefix": "*", "access": "Allow", "priority": 1010, "direction": "Inbound" }},
-          { "name": "AllowAnyCustom3343Inbound", "properties": { "protocol": "TCP", "sourcePortRange": "*", "destinationPortRange": "3343", "sourceAddressPrefix": "*", "destinationAddressPrefix": "*", "access": "Allow", "priority": 1020, "direction": "Inbound" }},
-          { "name": "AllowAnyHTTPSInbound", "properties": { "protocol": "TCP", "sourcePortRange": "*", "destinationPortRange": "443", "sourceAddressPrefix": "*", "destinationAddressPrefix": "*", "access": "Allow", "priority": 1030, "direction": "Inbound" }},
-          { "name": "AllowAnyCustom135Inbound", "properties": { "protocol": "TCP", "sourcePortRange": "*", "destinationPortRange": "135", "sourceAddressPrefix": "*", "destinationAddressPrefix": "*", "access": "Allow", "priority": 1040, "direction": "Inbound" }},
-          { "name": "AllowAnyCustom445Inbound", "properties": { "protocol": "TCP", "sourcePortRange": "*", "destinationPortRange": "445", "sourceAddressPrefix": "*", "destinationAddressPrefix": "*", "access": "Allow", "priority": 1050, "direction": "Inbound" }}
+          {
+            "name": "Allow-RDP",
+            "properties": {
+              "protocol": "Tcp",
+              "sourcePortRange": "*",
+              "destinationPortRange": "3389",
+              "sourceAddressPrefix": "*",
+              "destinationAddressPrefix": "*",
+              "access": "Allow",
+              "priority": 1000,
+              "direction": "Inbound"
+            }
+          },
+          {
+            "name": "AllowAnyHTTPInbound",
+            "properties": {
+              "protocol": "TCP",
+              "sourcePortRange": "*",
+              "destinationPortRange": "80",
+              "sourceAddressPrefix": "*",
+              "destinationAddressPrefix": "*",
+              "access": "Allow",
+              "priority": 1010,
+              "direction": "Inbound"
+            }
+          },
+          {
+            "name": "AllowAnyCustom3343Inbound",
+            "properties": {
+              "protocol": "TCP",
+              "sourcePortRange": "*",
+              "destinationPortRange": "3343",
+              "sourceAddressPrefix": "*",
+              "destinationAddressPrefix": "*",
+              "access": "Allow",
+              "priority": 1020,
+              "direction": "Inbound"
+            }
+          },
+          {
+            "name": "AllowAnyHTTPSInbound",
+            "properties": {
+              "protocol": "TCP",
+              "sourcePortRange": "*",
+              "destinationPortRange": "443",
+              "sourceAddressPrefix": "*",
+              "destinationAddressPrefix": "*",
+              "access": "Allow",
+              "priority": 1030,
+              "direction": "Inbound"
+            }
+          },
+          {
+            "name": "AllowAnyCustom135Inbound",
+            "properties": {
+              "protocol": "TCP",
+              "sourcePortRange": "*",
+              "destinationPortRange": "135",
+              "sourceAddressPrefix": "*",
+              "destinationAddressPrefix": "*",
+              "access": "Allow",
+              "priority": 1040,
+              "direction": "Inbound"
+            }
+          },
+          {
+            "name": "AllowAnyCustom445Inbound",
+            "properties": {
+              "protocol": "TCP",
+              "sourcePortRange": "*",
+              "destinationPortRange": "445",
+              "sourceAddressPrefix": "*",
+              "destinationAddressPrefix": "*",
+              "access": "Allow",
+              "priority": 1050,
+              "direction": "Inbound"
+            }
+          }
         ]
       }
     },
@@ -132,7 +216,9 @@
             "sku": "2022-datacenter-azure-edition",
             "version": "latest"
           },
-          "osDisk": { "createOption": "FromImage" }
+          "osDisk": {
+            "createOption": "FromImage"
+          }
         },
         "networkProfile": {
           "networkInterfaces": [
