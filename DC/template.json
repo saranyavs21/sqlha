@@ -24,7 +24,7 @@
   "variables": {
     "vnetName": "sqlVnet",
     "subnetName": "dcSubnet",
-    "nsgName": "dcNSG",
+    "nsgName": "sqlNSG",
     "nicName": "dcNic",
     "pipName": "dcPublicIP",
     "privateIP": "10.0.0.4",
