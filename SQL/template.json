@@ -316,7 +316,7 @@
         },
         {
             "type": "Microsoft.Resources/deployments",
-            "name": "[concat('Create-SQLVM_8a54240a8f9a4137ae9bec16fa4a9979', '-', uniqueString(concat('/subscriptions/', subscription().subscriptionId, '/resourceGroups/', resourceGroup().name)), '-', copyIndex())]",
+            "name": "[concat('Create-SQLVM_9b370f3cf319489591e23ff70e02bf0c', '-', uniqueString(concat('/subscriptions/', subscription().subscriptionId, '/resourceGroups/', resourceGroup().name)), '-', copyIndex())]",
             "apiVersion": "2019-03-01",
             "properties": {
                 "expressionEvaluationOptions": {
@@ -352,7 +352,7 @@
                             "type": "string",
                             "allowedValues": [
                                 "Static",
-                                "static"
+                                "Dynamic"
                             ]
                         },
                         "publicIpAddressSku": {
@@ -547,7 +547,7 @@
                                             "subnet": {
                                                 "id": "[variables('subnetRef')]"
                                             },
-                                            "privateIPAllocationMethod": "dynamic",
+                                            "privateIPAllocationMethod": "Dynamic",
                                             "publicIpAddress": {
                                                 "id": "[resourceId(resourceGroup().name, 'Microsoft.Network/publicIpAddresses', parameters('publicIpAddressName'))]",
                                                 "properties": {
@@ -960,7 +960,7 @@
         },
         {
             "type": "Microsoft.Resources/deployments",
-            "name": "Join-the-domain_8569bbfe8f1f48f08ecf7eb2eed6f5a8",
+            "name": "Join-the-domain_49885bf662eb4d4fa92e3bd2b44165e4",
             "apiVersion": "2019-03-01",
             "properties": {
                 "expressionEvaluationOptions": {
@@ -1072,7 +1072,7 @@
         },
         {
             "type": "Microsoft.Resources/deployments",
-            "name": "Failover-Cluster_b0b04e5f79f5435aaa1641a5c0f9af25",
+            "name": "Failover-Cluster_44fda370433a40e3bbab465d0e137e55",
             "apiVersion": "2019-03-01",
             "properties": {
                 "expressionEvaluationOptions": {
@@ -1318,7 +1318,7 @@
                         },
                         {
                             "type": "Microsoft.Resources/deployments",
-                            "name": "joincluster_6ad7aea090b147c6923f9a88132312ab",
+                            "name": "joincluster_7fdabcfe6d5b4305afa7f60ffc8ecbea",
                             "apiVersion": "2019-03-01",
                             "properties": {
                                 "expressionEvaluationOptions": {
@@ -1544,13 +1544,13 @@
                 }
             },
             "dependsOn": [
-                "[resourceId('Microsoft.Resources/deployments/', 'Join-the-domain_8569bbfe8f1f48f08ecf7eb2eed6f5a8')]"
+                "[resourceId('Microsoft.Resources/deployments/', 'Join-the-domain_49885bf662eb4d4fa92e3bd2b44165e4')]"
             ],
             "condition": "[variables('validParameters')]"
         },
         {
             "type": "Microsoft.Resources/deployments",
-            "name": "AG-Listener_d3cb701822d043f38fa86bc4f3c3780e",
+            "name": "AG-Listener_8919eb7c0781405c9a5d07657fb779d1",
             "apiVersion": "2019-03-01",
             "properties": {
                 "expressionEvaluationOptions": {
@@ -1737,7 +1737,7 @@
                 }
             },
             "dependsOn": [
-                "[resourceId('Microsoft.Resources/deployments/', 'Failover-Cluster_b0b04e5f79f5435aaa1641a5c0f9af25')]"
+                "[resourceId('Microsoft.Resources/deployments/', 'Failover-Cluster_44fda370433a40e3bbab465d0e137e55')]"
             ],
             "condition": "[variables('validParameters')]"
         }
