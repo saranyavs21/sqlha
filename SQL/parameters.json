@@ -87,7 +87,7 @@
             "value": "Sqlvm"
         },
         "localAdminPassword": {
-            "value": null
+            "value": "Sqlvm@1234567"
         },
         "sqlServerImageType": {
             "value": "SQL2022-WS2022"
