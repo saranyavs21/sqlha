@@ -243,7 +243,7 @@
         "typeHandlerVersion": "1.10",
         "autoUpgradeMinorVersion": true,
         "settings": {
-          "commandToExecute": "powershell.exe -ExecutionPolicy Bypass -Command \"& { Install-WindowsFeature AD-Domain-Services,DNS; Import-Module ADDSDeployment; Install-ADDSForest -DomainName 'corp.contoso.com' -SafeModeAdministratorPassword (ConvertTo-SecureString 'Sqladmin@123456' -AsPlainText -Force) -InstallDns -Force -NoReboot; shutdown /r /t 5 }\""
+          "commandToExecute": "powershell.exe -ExecutionPolicy Bypass -Command \"& { Install-WindowsFeature AD-Domain-Services,DNS; Import-Module ADDSDeployment; Install-ADDSForest -DomainName 'corp.contoso.com' -SafeModeAdministratorPassword (ConvertTo-SecureString 'Dcadmin@12345678' -AsPlainText -Force) -InstallDns -Force -NoReboot; shutdown /r /t 5 }\""
         }
       }
     }
