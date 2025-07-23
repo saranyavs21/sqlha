@@ -81,7 +81,8 @@ You can also check High Availability configuration from the SQL Virtual Machines
 ## 📄 Notes
 
 - You can customize names, IP addresses, domain names, admin usernames/passwords, etc., in the template parameters.
-- You need to update subscription ID in the template/parameters file with your subscription ID.
+- You need to update subscription ID in the SQL parameters file with your subscription ID.
+- You need to change the storage account name in the SQL parameters file.
 - Same NSG is being used for DC and SQL machines. NSG rules in the templates include ports needed for RDP and WSFC. You can also use separate NSGs for SQL and DC. 
 - Cloud Witness storage account is created automatically if specified.
 
