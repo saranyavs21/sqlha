@@ -38,7 +38,7 @@ The solution is designed to:
 
 ---
 
-## 🚀 Deployment Steps
+## Deployment Steps
 
 ### 1️⃣ Deploy Domain Controller VM
 
