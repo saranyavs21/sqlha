@@ -65,6 +65,7 @@ Tip: Change the default password in the script to a strong, unique one before ru
 
 Via Azure Portal > “Deploy a custom template”.
 Upload template and parameters files and proceed with the deployment in the "sql-ha" resource group.
+Make sure you change the subscription ID and Storage Account name.
 
 ---
 
